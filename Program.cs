@@ -8,7 +8,7 @@ namespace EventStoreConsoleTest
     {
         static void Main(string[] args)
         {
-            var conn = EventStoreConnection.Create("ConnectTo=tcp://admin:changeit@127.0.0.1:1113", "test-conn");
+            var conn = EventStoreConnection.Create("ConnectTo=tcp://admin:changeit@127.0.0.1:1113;UseSslConnection=false", "test-conn");
             conn.ConnectAsync().Wait();
 
             var streamName = "TestItem+3e93748f-d625-46c8-9574-588e81b03698";
